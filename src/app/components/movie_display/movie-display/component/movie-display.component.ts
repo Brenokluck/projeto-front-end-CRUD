@@ -30,4 +30,8 @@ export class MovieDisplayComponent {
       .saveMovieWhenInteracted(movieInteraction)
       .subscribe();
   }
+
+  deleteMovie(movie: any) {
+    this.movieDisplayService.deleteMovie(movie).subscribe();
+  }
 }

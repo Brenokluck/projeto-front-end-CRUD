@@ -1,13 +1,23 @@
 <div class="movie__box">
   @for (movie of movies; track movie) {
   <div class="movie__data">
+    <div class="movie__delete">
+      <a class="pi pi-trash" (click)="deleteMovie(movie)"></a>
+    </div>
     <a class="movie__title">{{ movie.title }}</a>
     <div class="movie__launch">
+      <a>Data de Lançamento:</a>
       <a>{{ movie.launch_date | date : "dd/MM/yyyy" }}</a>
     </div>
     <div class="review__stars">
+      <a class="box__office">Box Office:</a>
+      <a>$</a>
       <a>{{ movie.views }}</a>
+    </div>
+    <div class="movie__duration">
+      <a>Duração:</a>
       <a>{{ movie.duration }}</a>
+      <a>min</a>
     </div>
     <p-rating [(ngModel)]="movie.review_stars" [readonly]="true" [stars]="10" />
     <div class="movie__interactions">

@@ -10,7 +10,6 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
   styleUrl: './page.component.scss',
 })
 export class PageComponent {
-  @Input() rows: number = 0;
   @Input() totalRecords: number = 0;
   @Output() pageChange = new EventEmitter<PaginatorState>();
 

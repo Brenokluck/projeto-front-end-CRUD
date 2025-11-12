@@ -37,6 +37,11 @@ export class NavbarComponent implements OnInit {
         icon: 'pi pi-thumbs-down',
         command: () => this.router.navigate(['/dislike']),
       },
+      {
+        label: 'Novo',
+        icon: 'pi pi-plus',
+        command: () => this.router.navigate(['/register']),
+      },
     ];
   }
 }

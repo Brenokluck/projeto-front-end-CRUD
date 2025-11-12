@@ -4,11 +4,23 @@
   gap: 1rem;
   max-width: 20rem;
   margin: 1rem;
+
+  & .pi.pi-trash {
+    cursor: pointer;
+  }
 }
 
 .review__stars {
   display: flex;
-  gap: 7.5rem;
+}
+
+.box__office {
+  padding-right: 2rem;
+}
+
+.movie__duration {
+  display: flex;
+  gap: 1rem;
 }
 
 .movie__box {
@@ -16,10 +28,6 @@
   flex-wrap: wrap;
   max-width: 100%;
   padding: 3rem;
-}
-
-.movie__launch {
-  margin-left: auto;
 }
 
 .movie__title {
