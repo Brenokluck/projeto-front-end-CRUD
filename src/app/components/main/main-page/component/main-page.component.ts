@@ -3,7 +3,7 @@ import { MainPageService } from '../service/main-page.service';
 import { CommonModule } from '@angular/common';
 import { MovieDisplayComponent } from '../../../movie_display/movie-display/component/movie-display.component';
 import { MoviesInterface } from '../../../../interface/movies-interface';
-import { NavbarComponent } from '../../../../navbar/navbarcomponent/navbar.component';
+import { NavbarComponent } from '../../../../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-main-page',
@@ -18,10 +18,10 @@ export class MainPage implements OnInit {
   constructor(private mainPageService: MainPageService) {}
 
   ngOnInit(): void {
-    this.mainPageService.getMainPage().subscribe((res) =>
-      res.content.map((movie: MoviesInterface) => {
-        this.movies.push(movie);
-      })
-    );
+    this.mainPageService
+      .getPaginatedContent(0)
+      .subscribe(
+        (res) => (this.movies = res.content as unknown as MoviesInterface[])
+      );
   }
 }

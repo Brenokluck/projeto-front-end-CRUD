@@ -9,7 +9,7 @@
       <a>{{ movie.views }}</a>
       <a>{{ movie.duration }}</a>
     </div>
-    <p-rating [(ngModel)]="movie.review_stars" [readonly]="true" />
+    <p-rating [(ngModel)]="movie.review_stars" [readonly]="true" [stars]="10" />
     <div class="movie__interactions">
       <a
         class="pi pi-heart-fill"

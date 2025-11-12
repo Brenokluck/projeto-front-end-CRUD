@@ -1,14 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PaginatedInterface } from '../../../../interface/movies-interface';
+import {
+  MoviesInterface,
+  PaginatedInterface,
+} from '../../../../interface/movies-interface';
+import { PaginatorService } from '../../../../paginator/paginator.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MainPageService {
-  constructor(public httpClient: HttpClient) {}
+export class MainPageService extends PaginatorService<
+  PaginatedInterface<MoviesInterface>
+> {
+  protected apiUrl: string = '/movies/paginated?page=';
 
-  getMainPage() {
-    return this.httpClient.get<PaginatedInterface>('/movies/paginated?page=0');
+  constructor(httpClient: HttpClient) {
+    super(httpClient);
   }
 }

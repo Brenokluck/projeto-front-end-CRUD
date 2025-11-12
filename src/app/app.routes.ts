@@ -13,24 +13,24 @@ export const routes: Routes = [
     path: 'favoritos',
     pathMatch: 'full',
     loadComponent: () =>
-      import('./components/main/main-page/component/main-page.component').then(
-        (m) => m.MainPage
+      import('./components/favorites/component/favorites-page.component').then(
+        (m) => m.FavoritesPageComponent
       ),
   },
   {
     path: 'assistidos',
     pathMatch: 'full',
     loadComponent: () =>
-      import('./components/main/main-page/component/main-page.component').then(
-        (m) => m.MainPage
+      import('./components/watched/component/watched.component').then(
+        (m) => m.WatchedComponent
       ),
   },
   {
     path: 'dislike',
     pathMatch: 'full',
     loadComponent: () =>
-      import('./components/main/main-page/component/main-page.component').then(
-        (m) => m.MainPage
+      import('./components/black_list/component/black-list.component').then(
+        (m) => m.BlackListComponent
       ),
   },
 ];

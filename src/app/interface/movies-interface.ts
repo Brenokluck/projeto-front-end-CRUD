@@ -1,5 +1,5 @@
-export interface PaginatedInterface {
-  content: [MoviesInterface];
+export interface PaginatedInterface<T> {
+  content: [T];
   first: boolean;
   last: boolean;
   number: number;
@@ -20,7 +20,7 @@ export interface MoviesInterface {
   duration: number;
 }
 
-export interface MoviesInteractedInterface {
+export interface MoviesInteractedInterface extends PaginatedInterface<unknown> {
   black_list: boolean;
   favorite: boolean;
   watched: boolean;

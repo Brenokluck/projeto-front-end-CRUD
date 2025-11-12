@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class MovieDisplay {
   constructor(private httpClient: HttpClient) {}
 
-  interactWithMovie(
+  saveMovieWhenInteracted(
     movie: MoviesInteractedInterface
   ): Observable<MoviesInteractedInterface> {
     return this.httpClient.post<MoviesInteractedInterface>('/actions', movie);

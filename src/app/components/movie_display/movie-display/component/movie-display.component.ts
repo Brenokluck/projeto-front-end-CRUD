@@ -27,9 +27,7 @@ export class MovieDisplayComponent {
     } as MoviesInteractedInterface;
 
     this.movieDisplayService
-      .interactWithMovie(movieInteraction)
-      .subscribe((res) => {
-        console.log(res);
-      });
+      .saveMovieWhenInteracted(movieInteraction)
+      .subscribe();
   }
 }
