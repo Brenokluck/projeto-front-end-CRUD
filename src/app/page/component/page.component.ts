@@ -1,0 +1,22 @@
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { PaginatorModule, PaginatorState } from 'primeng/paginator';
+
+@Component({
+  selector: 'app-page',
+  imports: [CommonModule, PaginatorModule],
+  standalone: true,
+  templateUrl: './page.component.html',
+  styleUrl: './page.component.scss',
+})
+export class PageComponent {
+  @Input() rows: number = 0;
+  @Input() totalRecords: number = 0;
+  @Output() pageChange = new EventEmitter<PaginatorState>();
+
+  constructor() {}
+
+  onPageChange(event: PaginatorState) {
+    this.pageChange.emit(event);
+  }
+}
