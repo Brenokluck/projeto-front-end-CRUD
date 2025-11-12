@@ -13,6 +13,6 @@ export class App implements OnInit {
   protected readonly title = signal('projeto-back-end-CRUD');
 
   ngOnInit(): void {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/register']);
   }
 }

@@ -3,7 +3,9 @@
   <div class="movie__data">
     <div class="movie__delete">
       <a class="pi pi-trash" (click)="deleteMovie(movie)"></a>
+      <a class="pi pi-pencil" (click)="editMovie(movie)"></a>
     </div>
+
     <a class="movie__title">{{ movie.title }}</a>
     <div class="movie__launch">
       <a>Data de Lançamento:</a>

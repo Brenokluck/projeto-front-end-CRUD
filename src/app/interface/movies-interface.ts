@@ -10,11 +10,11 @@ export interface PaginatedInterface<T> {
 }
 
 export interface MoviesInterface {
-  id: string;
+  id?: string;
   title: string;
   description: string;
   launch_date: string | Date;
-  update_date: string | Date;
+  update_date?: string | Date;
   views: number;
   review_stars: number;
   duration: number;

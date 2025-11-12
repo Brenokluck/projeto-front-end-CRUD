@@ -5,7 +5,16 @@
   max-width: 20rem;
   margin: 1rem;
 
+  .movie__delete {
+    display: flex;
+    gap: 12rem;
+  }
+
   & .pi.pi-trash {
+    cursor: pointer;
+  }
+
+  & .pi.pi-pencil {
     cursor: pointer;
   }
 }

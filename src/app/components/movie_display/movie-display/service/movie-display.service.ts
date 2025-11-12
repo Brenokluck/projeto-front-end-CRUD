@@ -18,7 +18,7 @@ export class MovieDisplay {
     return this.httpClient.post<MoviesInteractedInterface>('/actions', movie);
   }
 
-  deleteMovie(movie: MoviesInterface): Observable<unknown> {
-    return this.httpClient.delete(`/movies/${movie.id}`);
+  deleteMovie(movie: MoviesInterface, apiUrl: string): Observable<unknown> {
+    return this.httpClient.delete(`${apiUrl}/${movie.id}`);
   }
 }

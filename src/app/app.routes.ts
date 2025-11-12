@@ -33,4 +33,12 @@ export const routes: Routes = [
         (m) => m.BlackListComponent
       ),
   },
+  {
+    path: 'register',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('./components/register/component/register.component').then(
+        (m) => m.RegisterComponent
+      ),
+  },
 ];
